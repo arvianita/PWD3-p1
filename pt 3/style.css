@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+header {
+    background-image: linear-gradient(rgba(255, 14, 6, 0.945), rgba(253, 7, 7, 0.5)), url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 50px 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+nav {
+    background-color: #06fdf1;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav .menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav .menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav .menu a:hover {
+    color: #32c0f8;
+}
+
+
+section {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+article {
+    background-color: #09d8f3;
+    padding: 25px;
+    border: 1px solid #05fdd4;
+    border-radius: 5px;
+    min-height: 300px;
+}
+
+
+article img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+aside {
+    background-color: #05eff7;
+    padding: 25px;
+    border: 1px solid #B3D1FF;
+    border-radius: 5px;
+    min-height: 300px;
+}
+
+footer {
+    background-color: #03ffff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

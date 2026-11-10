@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Tulis - Latihan 5</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Toko Tulis</h1>
+    <p>Perlengkapan alat tulis untuk sekolah dan kantor</p>
+  </header>
+
+  <main class="layout">
+    <section class="bagian-produk">
+      <h2>Daftar Produk</h2>
+      <div id="daftar-produk" class="grid-produk"></div>
+    </section>
+
+    <aside class="bagian-keranjang">
+      <h2>Keranjang</h2>
+      <p id="keranjang-kosong" class="kosong">Keranjang masih kosong. Pilih produk di sebelah kiri.</p>
+      <ul id="daftar-keranjang" class="daftar-keranjang"></ul>
+
+      <div class="total-box">
+        <p>Jumlah item: <strong id="jumlah-item">0</strong></p>
+        <p>Total harga: <strong id="total-harga">Rp 0</strong></p>
+      </div>
+
+      <div class="aksi">
+        <button id="btn-batal-terakhir" class="btn btn-garis">Batalkan Terakhir</button>
+        <button id="btn-kosongkan" class="btn btn-garis">Kosongkan</button>
+        <button id="btn-checkout" class="btn btn-utama">Checkout</button>
+      </div>
+
+      <div id="ringkasan" class="ringkasan"></div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<?php
+require_once 'kucing.php';
+require_once 'anjing.php';
+
+$kucing = new kucing("Alex", 3);
+$anjing = new anjing("Black", 5);
+
+$daftarHewan = [$kucing, $anjing];
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Hewan</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        table { border-collapse: collapse; }
+        th, td { border: 1px solid #999; padding: 8px 16px; text-align: left; }
+        th { background: #eee; }
+    </style>
+</head>
+<body>
+    <h2>Data Hewan</h2>
+    <table>
+        <tr>
+            <th>Nama</th>
+            <th>Umur</th>
+            <th>Jenis</th>
+            <th>Suara</th>
+        </tr>
+        <?php foreach ($daftarHewan as $h): ?>
+        <tr>
+            <td><?= $h->getNama() ?></td>
+            <td><?= $h->getUmur() ?> tahun</td>
+            <td><?= $h->getJenis() ?></td>
+            <td><?= $h->getSuara() ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+</body>
+</html>
+
+<?php
+class Hewan
+{
+    private $nama;
+    private $umur;
+
+    public function __construct($nama, $umur)
+    {
+        $this->setNama($nama);
+        $this->setUmur($umur);
+    }
+
+    public function setNama($nama)
+    {
+        $this->nama = $nama;
+    }
+
+    public function getNama()
+    {
+        return $this->nama;
+    }
+
+    public function setUmur($umur)
+    {
+        $this->umur = $umur;
+    }
+
+    public function getUmur()
+    {
+        return $this->umur;
+    }
+}
+
+<?php
+require_once 'Hewan.php';
+
+class kucing extends Hewan
+{
+    public function getJenis()
+    {
+        return "kucing";
+    }
+
+    public function getSuara()
+    {
+        return "Yaong nyaong";
+    }
+}
+
+<?php
+require_once 'Hewan.php';
+
+class anjing extends Hewan
+{
+    public function getJenis()
+    {
+        return "anjing";
+    }
+
+    public function getSuara()
+    {
+        return "Gok gok";
+    }
+}
